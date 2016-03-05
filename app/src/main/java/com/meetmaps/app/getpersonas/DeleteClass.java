@@ -23,8 +23,6 @@ public class DeleteClass{
                     @Override
                     public void onResponse(String response) {
 
-                        //errorDel.setText(response);
-
                     }
                 },
                 new Response.ErrorListener() {

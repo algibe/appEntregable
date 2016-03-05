@@ -34,12 +34,11 @@ public class GetActivity extends AppCompatActivity implements AdapterView.OnItem
     private static final String REGISTER_URL = "http://orlarium.com/meetmaps/meetmaps_api/api.php";
     public static final String KEY_PERSONAS = "action";
     public static final String key_get = "personas_get";
-    ArrayList<Person> arrayPersona = new ArrayList<>();
-    ListView listView;
-    personasAdapter adapter;
-    DeleteActivity delete;
+    private ArrayList<Person> arrayPersona = new ArrayList<>();
+    private ListView listView;
+    private personasAdapter adapter;
     private static Context context;
-    ProgressDialog PD;
+    private ProgressDialog PD;
 
     Person personSelected;
 
@@ -53,7 +52,6 @@ public class GetActivity extends AppCompatActivity implements AdapterView.OnItem
         PD.setCancelable(true);
 
         context = this.getApplicationContext();
-        delete = new DeleteActivity();
 
         listView = (ListView)findViewById(R.id.listView);
 
