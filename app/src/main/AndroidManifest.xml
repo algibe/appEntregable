@@ -33,16 +33,6 @@
         </activity>
 
         <activity
-            android:name=".DeleteActivity"
-            android:parentActivityName=".GetActivity">
-
-            <!-- Parent activity meta-data to support 4.0 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.meetmaps.app.getpersonas.GetActivity" />
-        </activity>
-
-        <activity
             android:name=".InfoActivity"
             android:parentActivityName=".GetActivity">
 
