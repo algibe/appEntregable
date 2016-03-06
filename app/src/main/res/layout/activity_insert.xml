@@ -7,28 +7,58 @@
     android:orientation="vertical"
     tools:context=".InsertActivity">
 
-    <EditText
-        android:singleLine="true"
-        android:inputType="text"
-        android:id="@+id/iName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nombre"/>
 
-    <EditText
-        android:singleLine="true"
-        android:inputType="text"
-        android:id="@+id/iCargo"
+    <android.support.design.widget.TextInputLayout
+        android:layout_marginBottom="6dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Cargo"/>
+        android:layout_height="wrap_content">
 
-    <EditText
-        android:singleLine="true"
-        android:inputType="text"
-        android:id="@+id/iEmpresa"
+        <EditText
+            android:singleLine="true"
+            android:inputType="text"
+            android:id="@+id/iName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_marginBottom="6dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Empresa"/>
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:singleLine="true"
+            android:inputType="text"
+            android:id="@+id/iCargo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cargo"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_marginBottom="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:singleLine="true"
+            android:inputType="text"
+            android:id="@+id/iEmpresa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Empresa"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imageUpdate"
+        android:layout_gravity="center"
+        android:contentDescription="fotoUpdate"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@mipmap/ic_delete"/>
 
 </LinearLayout>

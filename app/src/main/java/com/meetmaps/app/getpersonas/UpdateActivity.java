@@ -71,7 +71,7 @@ public class UpdateActivity extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(UpdateActivity.this, "error no va", Toast.LENGTH_LONG).show();
+                        Toast.makeText(UpdateActivity.this, "Error", Toast.LENGTH_LONG).show();
                     }
                 }){
 
