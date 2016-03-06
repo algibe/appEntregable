@@ -17,12 +17,12 @@
         <activity
             android:name=".GetActivity"
             android:alwaysRetainTaskState="true"
-            android:configChanges="orientation|screenSize"
             android:launchMode="singleTask">
 
         </activity>
 
         <activity
+            android:configChanges="orientation|screenSize"
             android:label="@string/labelInsert"
             android:name=".InsertActivity"
             android:parentActivityName=".GetActivity">
@@ -34,6 +34,7 @@
         </activity>
 
         <activity
+            android:configChanges="orientation|screenSize"
             android:label="@string/labelInfo"
             android:name=".InfoActivity"
             android:parentActivityName=".GetActivity">
@@ -45,6 +46,7 @@
         </activity>
 
         <activity
+            android:configChanges="orientation|screenSize"
             android:label="@string/labelUpdate"
             android:name=".UpdateActivity"
             android:parentActivityName=".GetActivity">

@@ -13,7 +13,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -150,12 +153,26 @@ public class GetActivity extends AppCompatActivity implements AdapterView.OnItem
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-        Intent info = new Intent(this,InfoActivity.class);
-        Bundle bundle = new Bundle();
-        bundle.putSerializable(safr_detail,arrayPersona.get(position));
-        bundle.putInt(safr_image,getResources().getIdentifier("ic_delete","mipmap",this.getPackageName()));
-        info.putExtras(bundle);
-        startActivity(info);
+        if(getResources().getConfiguration().smallestScreenWidthDp < 600) {
+            Intent info = new Intent(this, InfoActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putSerializable(safr_detail, arrayPersona.get(position));
+            bundle.putInt(safr_image, getResources().getIdentifier("ic_delete", "mipmap", this.getPackageName()));
+            info.putExtras(bundle);
+            startActivity(info);
+        } else{
+
+            TextView name = (TextView)findViewById(R.id.infoNombre);
+            TextView cargo = (TextView)findViewById(R.id.infoCargo);
+            TextView empresa = (TextView)findViewById(R.id.infoEmpresa);
+            ImageView imagen = (ImageView)findViewById(R.id.imageInfo);
+
+            name.setText(arrayPersona.get(position).getUsername());
+            cargo.setText(arrayPersona.get(position).getPosition());
+            empresa.setText(arrayPersona.get(position).getCompany());
+            imagen.setImageResource(R.mipmap.ic_delete);
+
+        }
 
     }
 
