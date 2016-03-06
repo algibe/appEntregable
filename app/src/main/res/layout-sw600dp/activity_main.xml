@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    android:baselineAligned="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_margin"
+    tools:context=".GetActivity">
+
+    <ListView
+        android:layout_weight="1"
+        android:divider="@color/dividerColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="1dp"
+        android:id="@+id/listView"/>
+
+    <fragment
+        android:layout_weight="1"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:name="com.meetmaps.app.getpersonas.InfoFragment"
+        android:id="@+id/FrgListado"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_info" />
+
+</LinearLayout>
