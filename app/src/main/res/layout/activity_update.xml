@@ -7,7 +7,7 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="@dimen/activity_margin"
         android:orientation="vertical"
         tools:context="com.meetmaps.app.getpersonas.UpdateActivity">
@@ -23,7 +23,7 @@
                 android:id="@+id/update_nombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nombre to update" />
+                android:hint="@string/nombreUpdate" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -38,7 +38,7 @@
                 android:id="@+id/update_cargo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Cargo to update" />
+                android:hint="@string/cargoUpdate" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -53,14 +53,14 @@
                 android:id="@+id/update_empresa"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Empresa to update" />
+                android:hint="@string/empresaUpdate" />
 
         </android.support.design.widget.TextInputLayout>
 
         <ImageView
             android:id="@+id/imageUpdate"
             android:layout_gravity="center"
-            android:contentDescription="fotoUpdate"
+            android:contentDescription="@string/fotoDescripction"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:background="@mipmap/ic_delete"/>

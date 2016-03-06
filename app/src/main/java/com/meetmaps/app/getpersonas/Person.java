@@ -4,6 +4,13 @@ import java.io.Serializable;
 
 public class Person implements Serializable{
 
+    public static final String REGISTER_URL = "http://orlarium.com/meetmaps/meetmaps_api/api.php";
+    public static final String KEY_ACTION = "action";
+    public static final String KEY_NOMBRE = "nombre";
+    public static final String KEY_CARGO = "cargo";
+    public static final String KEY_EMPRESA = "empresa";
+    public static final String KEY_ID = "id";
+
     private String idPerson;
     private String username;
     private String position;

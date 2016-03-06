@@ -10,7 +10,7 @@
     tools:context=".GetActivity">
 
     <ImageView
-        android:contentDescription="foto"
+        android:contentDescription="@string/fotoDescripction"
         android:src="@mipmap/ic_delete"
         android:layout_gravity="center"
         android:id="@+id/deletePerson"
@@ -23,7 +23,7 @@
     <LinearLayout
         android:layout_weight="1"
         android:layout_gravity="center"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
@@ -36,7 +36,7 @@
                 android:textColor="@color/primaryText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nombre"
+                android:text="@string/nombreText"
                 android:id="@+id/name"/>
 
             <TextView
@@ -45,13 +45,13 @@
                 android:layout_marginRight="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="-"/>
+                android:text="@string/raya"/>
 
             <TextView
                 android:textColor="@color/primaryText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Empresa"
+                android:text="@string/empresaText"
                 android:id="@+id/company"/>
 
             </LinearLayout>
@@ -60,13 +60,13 @@
             android:textColor="@color/secondaryText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cargo"
+            android:text="@string/cargoText"
             android:id="@+id/position"/>
 
     </LinearLayout>
 
     <ImageView
-        android:contentDescription="detail"
+        android:contentDescription="@string/detailPerson"
         android:src="@mipmap/ic_detail"
         android:layout_gravity="center"
         android:layout_marginRight="16dp"

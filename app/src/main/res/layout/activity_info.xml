@@ -7,14 +7,14 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="@dimen/activity_margin"
         android:orientation="vertical"
         tools:context="com.meetmaps.app.getpersonas.InfoActivity">
 
         <ImageView
             android:layout_marginBottom="20dp"
-            android:contentDescription="fotoInfo"
+            android:contentDescription="@string/fotoDescripction"
             android:layout_gravity="center"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -28,7 +28,7 @@
             android:id="@+id/infoNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nombre"/>
+            android:text="@string/nombreText"/>
 
         <TextView
             android:textColor="@color/primaryText"
@@ -38,7 +38,7 @@
             android:id="@+id/infoEmpresa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Empresa"/>
+            android:text="@string/empresaText"/>
 
         <TextView
             android:textColor="@color/primaryText"
@@ -48,7 +48,7 @@
             android:id="@+id/infoCargo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cargo"/>
+            android:text="@string/cargoText"/>
 
     </LinearLayout>
 

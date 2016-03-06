@@ -14,7 +14,6 @@ import java.util.ArrayList;
 
 public class personasAdapter extends BaseAdapter {
 
-    String url;
     private Activity activity;
     private ArrayList<Person>  data;
     private LayoutInflater inflater;
@@ -61,8 +60,6 @@ public class personasAdapter extends BaseAdapter {
         empresa.setText(data.get(position).getCompany());
         image.setImageResource(R.mipmap.ic_delete);
         //añadir imagen
-
-
 
         return  convertView;
     }

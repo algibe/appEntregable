@@ -31,14 +31,18 @@ import java.util.Map;
 
 public class GetActivity extends AppCompatActivity implements AdapterView.OnItemClickListener,AbsListView.MultiChoiceModeListener{
 
-    private static final String REGISTER_URL = "http://orlarium.com/meetmaps/meetmaps_api/api.php";
-    public static final String KEY_PERSONAS = "action";
-    public static final String key_get = "personas_get";
+
+    private String key_get = "personas_get";
     private ArrayList<Person> arrayPersona = new ArrayList<>();
     private ListView listView;
     private personasAdapter adapter;
     private static Context context;
     private ProgressDialog PD;
+
+    public static final String safr_update = "updatePerson" ;
+    public static final String safr_new = "nuevaPersona" ;
+    public static final String safr_detail = "detailPerson" ;
+    public static final String safr_image = "detailImage" ;
 
     Person personSelected;
 
@@ -80,7 +84,7 @@ public class GetActivity extends AppCompatActivity implements AdapterView.OnItem
         arrayPersona.clear();
         PD.show();
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, REGISTER_URL,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Person.REGISTER_URL,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -104,7 +108,7 @@ public class GetActivity extends AppCompatActivity implements AdapterView.OnItem
             @Override
             protected Map<String,String> getParams(){
                 Map<String,String> params = new HashMap<>();
-                params.put(KEY_PERSONAS,key_get);
+                params.put(Person.KEY_ACTION,key_get);
                 return params;
             }
 
@@ -145,8 +149,8 @@ public class GetActivity extends AppCompatActivity implements AdapterView.OnItem
 
         Intent info = new Intent(this,InfoActivity.class);
         Bundle bundle = new Bundle();
-        bundle.putSerializable("detailPerson",arrayPersona.get(position));
-        bundle.putInt("imageInfo",getResources().getIdentifier("ic_delete","mipmap",this.getPackageName()));
+        bundle.putSerializable(safr_detail,arrayPersona.get(position));
+        bundle.putInt(safr_image,getResources().getIdentifier("ic_delete","mipmap",this.getPackageName()));
         info.putExtras(bundle);
         startActivity(info);
 
@@ -187,7 +191,7 @@ public class GetActivity extends AppCompatActivity implements AdapterView.OnItem
 
             case R.id.context_update:
                 Intent i = new Intent(GetActivity.getContext(),UpdateActivity.class);
-                i.putExtra("updatePerson",personSelected);
+                i.putExtra(safr_update,personSelected);
                 startActivityForResult(i,1);
                 mode.finish();
                 return true;
@@ -233,7 +237,7 @@ public class GetActivity extends AppCompatActivity implements AdapterView.OnItem
 
         if(resultCode == Activity.RESULT_OK){
 
-            Person person = (Person) data.getSerializableExtra("nuevaPersona");
+            Person person = (Person) data.getSerializableExtra(safr_new);
 
             switch (requestCode){
                 case 0://Insert

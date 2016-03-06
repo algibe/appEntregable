@@ -12,13 +12,11 @@ import java.util.Map;
 
 public class DeleteClass{
 
-    private static final String REGISTER_URLdel = "http://orlarium.com/meetmaps/meetmaps_api/api.php";
-    public static final String DELETE_ACTION = "action";
-    public static final String ID_ACTION = "id";
+    private static String action = "personas_del";
 
     public static void deleteUser(final String id,Context context){
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, REGISTER_URLdel,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Person.REGISTER_URL,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -34,8 +32,8 @@ public class DeleteClass{
             @Override
             protected Map<String,String> getParams(){
                 Map<String,String> params = new HashMap<>();
-                params.put(DELETE_ACTION,"personas_del");
-                params.put(ID_ACTION,id);
+                params.put(Person.KEY_ACTION,action);
+                params.put(Person.KEY_ID,id);
                 return params;
             }
 

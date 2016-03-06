@@ -1,5 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <resources>
+
     <string name="app_name">AppEntreable</string>
 
+    <!-- Activity Texts-->
+    <string name="fotoDescripction">foto</string>
+    <string name="nombreText">Nombre</string>
+    <string name="cargoText">Cargo</string>
+    <string name="empresaText">Empresa</string>
+
+    <string name="nombreUpdate">Nombre para actualizar</string>
+    <string name="cargoUpdate">Cargo para actualizar</string>
+    <string name="empresaUpdate">Empresa para actualizar</string>
+
+    <string name="detailPerson">Detalle</string>
+
+    <string name="raya">-</string>
+
+    <!-- Labels app-->
+    <string name="labelInsert">Insertar nueva persona</string>
+    <string name="labelUpdate">Modificar una persona</string>
+    <string name="labelInfo">Visualizar una persona</string>
 
 </resources>

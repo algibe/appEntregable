@@ -22,12 +22,7 @@ import java.util.Map;
 
     public class InsertActivity extends AppCompatActivity{
 
-        private static final String REGISTER_URL2 = "http://orlarium.com/meetmaps/meetmaps_api/api.php";
         private String action = "personas_add";
-        public static final String INSERT_NAME = "nombre";
-        public static final String INSERT_CARGO = "cargo";
-        public static final String INSERT_EMPRESA = "empresa";
-        public static final String INSERT_ACTION = "action";
 
         private EditText name;
         private EditText cargo;
@@ -50,7 +45,7 @@ import java.util.Map;
             final String cargoMap = cargo.getText().toString().trim();
             final String empresaMap = empresa.getText().toString().trim();
 
-            StringRequest stringRequest = new StringRequest(Request.Method.POST, REGISTER_URL2,
+            StringRequest stringRequest = new StringRequest(Request.Method.POST, Person.REGISTER_URL,
                     new Response.Listener<String>() {
                         @Override
                         public void onResponse(String response) {
@@ -67,10 +62,10 @@ import java.util.Map;
                 @Override
                 protected Map<String,String> getParams(){
                     Map<String,String> params = new HashMap<>();
-                    params.put(INSERT_ACTION,action);
-                    params.put(INSERT_NAME,nameMap);
-                    params.put(INSERT_CARGO,cargoMap);
-                    params.put(INSERT_EMPRESA,empresaMap);
+                    params.put(Person.KEY_ACTION,action);
+                    params.put(Person.KEY_NOMBRE,nameMap);
+                    params.put(Person.KEY_CARGO,cargoMap);
+                    params.put(Person.KEY_EMPRESA,empresaMap);
                     return params;
                 }
 

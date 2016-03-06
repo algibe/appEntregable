@@ -23,6 +23,7 @@
         </activity>
 
         <activity
+            android:label="@string/labelInsert"
             android:name=".InsertActivity"
             android:parentActivityName=".GetActivity">
 
@@ -33,6 +34,7 @@
         </activity>
 
         <activity
+            android:label="@string/labelInfo"
             android:name=".InfoActivity"
             android:parentActivityName=".GetActivity">
 
@@ -43,6 +45,7 @@
         </activity>
 
         <activity
+            android:label="@string/labelUpdate"
             android:name=".UpdateActivity"
             android:parentActivityName=".GetActivity">
 

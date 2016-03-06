@@ -21,14 +21,14 @@ public class InfoActivity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
 
-        Person person = (Person) extras.getSerializable("detailPerson");
+        Person person = (Person) extras.getSerializable(GetActivity.safr_detail);
         if (person != null) {
             tName.setText(person.getUsername());
             tCargo.setText(person.getPosition());
             tEmpresa.setText(person.getCompany());
         }
 
-        imageInfo.setImageResource(extras.getInt("imageInfo"));
+        imageInfo.setImageResource(extras.getInt(GetActivity.safr_image));
 
     }
 }

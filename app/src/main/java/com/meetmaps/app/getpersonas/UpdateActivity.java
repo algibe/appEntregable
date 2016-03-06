@@ -21,7 +21,6 @@ import java.util.Map;
 
 public class UpdateActivity extends AppCompatActivity {
 
-    private static final String REGISTER_URL2 = "http://orlarium.com/meetmaps/meetmaps_api/api.php";
     private String action = "personas_upd";
 
     private String upId;
@@ -43,9 +42,9 @@ public class UpdateActivity extends AppCompatActivity {
         upEmpresa = (EditText)findViewById(R.id.update_empresa);
 
         Intent receta = getIntent();
-        if (receta.hasExtra("updatePerson")) {
+        if (receta.hasExtra(GetActivity.safr_update)) {
 
-            Person updatePerson = (Person) receta.getSerializableExtra("updatePerson");
+            Person updatePerson = (Person) receta.getSerializableExtra(GetActivity.safr_update);
             upName.setText(updatePerson.getUsername());
             upCargo.setText(updatePerson.getPosition());
             upEmpresa.setText(updatePerson.getCompany());
@@ -61,7 +60,7 @@ public class UpdateActivity extends AppCompatActivity {
         cargoMap = upCargo.getText().toString().trim();
         empresaMap = upEmpresa.getText().toString().trim();
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, REGISTER_URL2,
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Person.REGISTER_URL,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -78,11 +77,11 @@ public class UpdateActivity extends AppCompatActivity {
             @Override
             protected Map<String,String> getParams(){
                 Map<String,String> params = new HashMap<>();
-                params.put("action",action);
-                params.put("id",upId);
-                params.put("nombre",nameMap);
-                params.put("cargo",cargoMap);
-                params.put("empresa",empresaMap);
+                params.put(Person.KEY_ACTION,action);
+                params.put(Person.KEY_ID,upId);
+                params.put(Person.KEY_NOMBRE,nameMap);
+                params.put(Person.KEY_CARGO,cargoMap);
+                params.put(Person.KEY_EMPRESA,empresaMap);
                 return params;
             }
 
@@ -109,8 +108,8 @@ public class UpdateActivity extends AppCompatActivity {
 
                 Person updatedPerson = new Person(upId,nameMap,cargoMap,empresaMap);
                 Intent i = new Intent(this,GetActivity.class);
-                i.putExtra("nuevaPersona",updatedPerson);
-                setResult(Activity.RESULT_OK,i);
+                i.putExtra(GetActivity.safr_new,updatedPerson);
+                setResult(Activity.RESULT_OK, i);
                 finish();
                 return true;
             default:
