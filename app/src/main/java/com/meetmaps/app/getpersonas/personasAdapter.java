@@ -2,6 +2,7 @@ package com.meetmaps.app.getpersonas;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,17 +51,15 @@ public class personasAdapter extends BaseAdapter {
             convertView = this.inflater.inflate(item_layout,null);
         }
 
-        TextView id = (TextView) convertView.findViewById(R.id.Id);
         TextView nombre = (TextView) convertView.findViewById(R.id.name);
         TextView cargo = (TextView) convertView.findViewById(R.id.position);
         TextView empresa = (TextView) convertView.findViewById(R.id.company);
-
         ImageView image = (ImageView) convertView.findViewById(R.id.deletePerson);
 
-        id.setText(data.get(position).getIdPerson());
         nombre.setText(data.get(position).getUsername());
         cargo.setText(data.get(position).getPosition());
         empresa.setText(data.get(position).getCompany());
+        image.setImageResource(R.mipmap.ic_delete);
         //añadir imagen
 
 

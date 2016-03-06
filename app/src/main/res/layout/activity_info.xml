@@ -7,6 +7,12 @@
     android:orientation="vertical"
     tools:context="com.meetmaps.app.getpersonas.InfoActivity">
 
+    <ImageView
+        android:contentDescription="fotoInfo"
+        android:layout_gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageInfo"/>
     <TextView
         android:id="@+id/infoNombre"
         android:layout_width="match_parent"

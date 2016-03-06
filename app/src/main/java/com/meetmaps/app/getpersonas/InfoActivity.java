@@ -1,12 +1,16 @@
 package com.meetmaps.app.getpersonas;
 
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class InfoActivity extends AppCompatActivity {
 
-    TextView tName,tCargo,tEmpresa;
+    private TextView tName,tCargo,tEmpresa;
+    private ImageView imageInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,11 +20,18 @@ public class InfoActivity extends AppCompatActivity {
         tName = (TextView)findViewById(R.id.infoNombre);
         tCargo = (TextView)findViewById(R.id.infoCargo);
         tEmpresa = (TextView)findViewById(R.id.infoEmpresa);
+        imageInfo = (ImageView)findViewById(R.id.imageInfo);
 
-        Bundle extra = getIntent().getExtras();
-        tName.setText(extra.getString("p1"));
-        tCargo.setText(extra.getString("p2"));
-        tEmpresa.setText(extra.getString("p3"));
+        Bundle extras = getIntent().getExtras();
+
+        Person person = (Person) extras.getSerializable("detailPerson");
+        if (person != null) {
+            tName.setText(person.getUsername());
+            tCargo.setText(person.getPosition());
+            tEmpresa.setText(person.getCompany());
+        }
+
+        imageInfo.setImageResource(extras.getInt("imageInfo"));
 
     }
 }

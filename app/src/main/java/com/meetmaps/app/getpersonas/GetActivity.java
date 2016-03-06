@@ -143,21 +143,11 @@ public class GetActivity extends AppCompatActivity implements AdapterView.OnItem
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-        String tName = arrayPersona.get(position).getUsername();
-        String tCargo = arrayPersona.get(position).getPosition();
-        String tEmpresa = arrayPersona.get(position).getCompany();
-        String tId = arrayPersona.get(position).getIdPerson();
-
-        Toast.makeText(this,tId +". "+tName+" "+tCargo+" "+tEmpresa,Toast.LENGTH_SHORT).show();
-
-        adapter.notifyDataSetChanged();
-
         Intent info = new Intent(this,InfoActivity.class);
-        Bundle extras = new Bundle();
-        extras.putString("p1", tName);
-        extras.putString("p2", tCargo);
-        extras.putString("p3", tEmpresa);
-        info.putExtras(extras);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("detailPerson",arrayPersona.get(position));
+        bundle.putInt("imageInfo",getResources().getIdentifier("ic_delete","mipmap",this.getPackageName()));
+        info.putExtras(bundle);
         startActivity(info);
 
     }
