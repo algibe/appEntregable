@@ -9,18 +9,15 @@ import android.widget.TextView;
 
 public class InfoActivity extends AppCompatActivity {
 
-    private TextView tName,tCargo,tEmpresa;
-    private ImageView imageInfo;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
 
-        tName = (TextView)findViewById(R.id.infoNombre);
-        tCargo = (TextView)findViewById(R.id.infoCargo);
-        tEmpresa = (TextView)findViewById(R.id.infoEmpresa);
-        imageInfo = (ImageView)findViewById(R.id.imageInfo);
+        TextView tName = (TextView) findViewById(R.id.infoNombre);
+        TextView tCargo = (TextView) findViewById(R.id.infoCargo);
+        TextView tEmpresa = (TextView) findViewById(R.id.infoEmpresa);
+        ImageView imageInfo = (ImageView) findViewById(R.id.imageInfo);
 
         Bundle extras = getIntent().getExtras();
 
