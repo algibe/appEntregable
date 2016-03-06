@@ -1,63 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/activity_margin"
-    android:orientation="vertical"
-    tools:context="com.meetmaps.app.getpersonas.UpdateActivity">
+    android:layout_height="match_parent">
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_marginBottom="6dp"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:padding="@dimen/activity_margin"
+        android:orientation="vertical"
+        tools:context="com.meetmaps.app.getpersonas.UpdateActivity">
 
-        <EditText
-            android:inputType="text"
-            android:singleLine="true"
-            android:id="@+id/update_nombre"
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginBottom="6dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Nombre to update" />
+            android:layout_height="wrap_content">
 
-    </android.support.design.widget.TextInputLayout>
+            <EditText
+                android:inputType="text"
+                android:singleLine="true"
+                android:id="@+id/update_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre to update" />
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_marginBottom="6dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        </android.support.design.widget.TextInputLayout>
 
-        <EditText
-            android:inputType="text"
-            android:singleLine="true"
-            android:id="@+id/update_cargo"
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginBottom="6dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Cargo to update" />
+            android:layout_height="wrap_content">
 
-    </android.support.design.widget.TextInputLayout>
+            <EditText
+                android:inputType="text"
+                android:singleLine="true"
+                android:id="@+id/update_cargo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cargo to update" />
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_marginBottom="40dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        </android.support.design.widget.TextInputLayout>
 
-        <EditText
-            android:inputType="text"
-            android:singleLine="true"
-            android:id="@+id/update_empresa"
+        <android.support.design.widget.TextInputLayout
+            android:layout_marginBottom="40dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Empresa to update" />
+            android:layout_height="wrap_content">
 
-    </android.support.design.widget.TextInputLayout>
+            <EditText
+                android:inputType="text"
+                android:singleLine="true"
+                android:id="@+id/update_empresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Empresa to update" />
 
-    <ImageView
-        android:id="@+id/imageUpdate"
-        android:layout_gravity="center"
-        android:contentDescription="fotoUpdate"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@mipmap/ic_delete"/>
+        </android.support.design.widget.TextInputLayout>
 
-</LinearLayout>
+        <ImageView
+            android:id="@+id/imageUpdate"
+            android:layout_gravity="center"
+            android:contentDescription="fotoUpdate"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@mipmap/ic_delete"/>
+
+    </LinearLayout>
+
+</ScrollView>
