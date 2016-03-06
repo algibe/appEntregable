@@ -1,4 +1,4 @@
-package com.meetmaps.app.getpersonas;
+package com.meetmaps.app.getpersonas.Modelo;
 
 import java.io.Serializable;
 

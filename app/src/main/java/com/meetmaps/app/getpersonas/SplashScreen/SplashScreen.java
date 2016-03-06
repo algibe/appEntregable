@@ -1,10 +1,13 @@
-package com.meetmaps.app.getpersonas;
+package com.meetmaps.app.getpersonas.SplashScreen;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
+
+import com.meetmaps.app.getpersonas.GetActivity;
+import com.meetmaps.app.getpersonas.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

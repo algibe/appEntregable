@@ -6,6 +6,8 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.meetmaps.app.getpersonas.Modelo.Person;
+import com.meetmaps.app.getpersonas.Singleton.MySocialMediaSingleton;
 
 import java.util.HashMap;
 import java.util.Map;

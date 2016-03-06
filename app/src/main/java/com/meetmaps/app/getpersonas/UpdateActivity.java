@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -15,6 +14,8 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.meetmaps.app.getpersonas.Modelo.Person;
+import com.meetmaps.app.getpersonas.Singleton.MySocialMediaSingleton;
 
 import java.util.HashMap;
 import java.util.Map;

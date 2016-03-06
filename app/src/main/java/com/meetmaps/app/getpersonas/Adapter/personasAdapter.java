@@ -1,14 +1,16 @@
-package com.meetmaps.app.getpersonas;
+package com.meetmaps.app.getpersonas.Adapter;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.meetmaps.app.getpersonas.Modelo.Person;
+import com.meetmaps.app.getpersonas.R;
 
 import java.util.ArrayList;
 

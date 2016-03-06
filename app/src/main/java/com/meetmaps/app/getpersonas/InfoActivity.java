@@ -1,11 +1,11 @@
 package com.meetmaps.app.getpersonas;
 
-import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.meetmaps.app.getpersonas.Modelo.Person;
 
 public class InfoActivity extends AppCompatActivity {
 

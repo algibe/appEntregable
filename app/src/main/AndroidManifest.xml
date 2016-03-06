@@ -55,7 +55,7 @@
                 android:value="com.meetmaps.app.getpersonas.GetActivity" />
         </activity>
 
-        <activity android:name=".SplashScreen">
+        <activity android:name=".SplashScreen.SplashScreen">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

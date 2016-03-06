@@ -1,4 +1,4 @@
-package com.meetmaps.app.getpersonas;
+package com.meetmaps.app.getpersonas.Singleton;
 
 import android.content.Context;
 
